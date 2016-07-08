@@ -1,0 +1,2 @@
+ALTER TABLE `orders` ADD `warehouse_services` SET('1','2','3','4','5') NOT NULL DEFAULT '1', ADD `fba_order_created` ENUM('y','n','p') NOT NULL DEFAULT 'n', ADD `fba_response` LONGTEXT NOT NULL , ADD `fba_sent` INT(5) NOT NULL , ADD `fba_shipped` INT(5) NOT NULL , ADD `fba_cancelled` INT(5) NOT NULL, ADD `fba_pending` INT(5) NOT NULL, ADD `fba_shipped_status` ENUM('y','n','p') NOT NULL DEFAULT 'n' ;
+

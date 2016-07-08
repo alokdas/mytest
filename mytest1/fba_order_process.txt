@@ -1,0 +1,24 @@
+################## jet order integration with amazon FBA using MWS credentials ##################
+
+1. This module is used for creating orders at Amazon from Jet, getting fulfillment details for the orders from Amazon and send it to Jet and manages stock sync in system.
+
+2. The methods inside the Fba.php Controller is used for creating FBA orders at system, send these orders to Amazon using MWS credentials, downloading the fulfilment details for these FBA orders, then send these shipment details to Jet and managing stock sync for these orders inside system
+
+3. All these methods can used as cron at a particular time schedule.
+
+
+
+################## Process ##################
+
+1. YOUR_SITE_URL/index.php/Fba/CreateFBAOrderAtAmazon
+
+This URL create orders at FBA. Changes the fba_order_created status from 'n' to 'p' in system, then process these orders to FBA, when successfully created these orders in FBA then change its fba_order_created from 'p' to 'y'. After created these orders in FBA, update order fba_shipped_status as 'p'.
+
+2. OUR_SITE_URL/index.php/Fba/GetFBAFulfillOrder
+
+This URL download the fulfilment details for these amazon fba orders. Manages the stock for these order items in system. When order has fulfilled at FBA, it changes its order fba_shipped_status from 'p' to 'y'.
+
+3. OUR_SITE_URL/index.php/Fba/update_order_status_in_jet
+
+This URL update the tracking details in JET server for these amazon orders
+
