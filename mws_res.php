@@ -1,7 +1,7 @@
 <?php
 
 error_reporting(0);
-echo '<pre>';
+//echo '<pre>';
 //echo strlen('Jane Iredale Dream Tint Moisture Tint SPF 15  Warm Bronze  7.4ml x 3 Travel size');exit;
 $response1 = '<?xml version="1.0" encoding="UTF-8"?>
 <GetFulfillmentOrderResponse
@@ -311,9 +311,9 @@ if ($FulfillmentOrderStatus == 'CANCELLED' || $FulfillmentOrderStatus == 'UNFULF
     $Update_Orders_Qry = "UPDATE orders SET order_detail = '".json_encode($Orders_order_details)."', shipments = '".json_encode($Orders_shipments)."', fba_cancelled = '$fba_cancelled', fba_shipped = '$fba_shipped' WHERE merchant_order_id='".$merchant_order_id."' AND cred_id='".$cred_id."'";
     $Insert_Ship_Orders_Qry   = "INSERT INTO ship_orders (ship_order) VALUES('".$merchant_order_id."')";
     
-    echo '<br>'.$Update_Orders_Qry;
+    //echo '<br>'.$Update_Orders_Qry;
 } //End of else if for $FulfillmentOrderStatus
         
-echo '<br>'; 
+//echo '<br>'; 
 //echo '<pre>';print_r($response);
 
