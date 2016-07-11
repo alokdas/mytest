@@ -1,6 +1,6 @@
 <?php
 
-error_reporting(0);
+//error_reporting(0); //Commenting error_reporting for test purpose for updating in git new branch
 //echo '<pre>';
 //echo strlen('Jane Iredale Dream Tint Moisture Tint SPF 15  Warm Bronze  7.4ml x 3 Travel size');exit;
 $response1 = '<?xml version="1.0" encoding="UTF-8"?>
